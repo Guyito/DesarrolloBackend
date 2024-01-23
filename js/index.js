@@ -1,4 +1,10 @@
 
-var nombreIngresado = prompt("Ingrese el Nombre del alumno:");
+/* Proyecto de App para Stock e inventario/*
 
-console.log (nombreIngresado);
+
+// Nuevo Usuario
+
+
+
+// Login de Usuario
+
