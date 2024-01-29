@@ -1,91 +1,90 @@
 
 // Proyecto de App para Stock e inventario
 
-// alert ("Bienvenido! Por favor seleccione la opcion de logueo:")
+alert ("Bienvenido! Por favor seleccione la opcion de logueo:")
 
 
-// let nuevoUsuario = "true"
+let nuevoUsuario = "true"
 
-// const LEGAJOUSUARIO = prompt ("Ingrese su Legajo:") 
-// let passwordUsuario = prompt("Ingrese su Password:")
+const LEGAJOUSUARIO = prompt ("Ingrese su Legajo:") 
+let passwordUsuario = prompt("Ingrese su Password:")
 
 
-// if (LEGAJOUSUARIO != ""){
-//     console.log("Ingresando al sistema: " + LEGAJOUSUARIO);
-// }
-// else {
-//     alert("Error! Por favor solicite Usuario del Sistema");
-// }
+if (LEGAJOUSUARIO != ""){
+    console.log("Ingresando al sistema: " + LEGAJOUSUARIO);
+}
+else {
+    alert("Error! Por favor solicite Usuario del Sistema");
+}
 
 
 // Buscar Material
 
-// let nombreMaterial = prompt ("cual material busca?");
-// const PARTCODE = "1234"
+let nombreMaterial = prompt ("cual material busca?");
+const PARTCODE = "1234"
 
-// if ((nombreMaterial == "refrigerador") || (nombreMaterial == "heladera"))
-//     console.log (nombreMaterial + "el codigo de parte buscado es" + "" + PARTCODE);
-//     else {
-// console.log ("no existe el material")
-//     }
+if ((nombreMaterial == "refrigerador") || (nombreMaterial == "heladera"))
+    console.log (nombreMaterial + "el codigo de parte buscado es" + "" + PARTCODE);
+    else {
+console.log ("no existe el material")
+    }
 
 
 // Materiales con precio:
 
-// let materialLavarropas = 0;
+let materialLavarropas = 0;
 
-// for (let i = 1; i == 10; i++){
+for (let i = 1; i == 10; i++){
 
-//     if (materialLavarropas == 5){
-//         console.log ("Se uso el 50% del stock, pedir Compra")
-//     }
-// }
+    if (materialLavarropas == 5){
+        console.log ("Se uso el 50% del stock, pedir Compra")
+    }
+}
 
 // Nuevo Usuario
 
-// let continuarOno = "si"
+let continuarOno = "si"
 
-// if (continuarOno != true){ 
+if (continuarOno != true){ 
 
-// let nombre = prompt ("Nombre de Usuario:")
-// let apellido = prompt ("Apellido de Usuario:")
-// const legajo = prompt ("Ingrese su legajo:")
+let nombre = prompt ("Nombre de Usuario:")
+let apellido = prompt ("Apellido de Usuario:")
+const legajo = prompt ("Ingrese su legajo:")
 
-// console.log (nombre + " " + apellido + " " + legajo)
-// } else {
-//     alert ("salir del sistema")
-// }
-
+console.log (nombre + " " + apellido + " " + legajo)
+} else {
+    alert ("salir del sistema")
+}
 
 // Ingreso de entrada de materiales
 
-// let materialLavarropas =0
-// let materialHeladera=0
-// let materialHorno=0
+// let materialLavarropas =0 (YA DECLARADO)
+let materialHeladera=0
+let materialHorno=0
 
-// let MATERIAL = prompt ("ingresar material")
+let MATERIAL = prompt ("ingresar material")
 
-// while (MATERIAL != "ESC"){
+while (MATERIAL != "ESC"){
 
-// switch (MATERIAL){
+switch (MATERIAL){
 
-// case "lavarropas": console.log ("Ingreso de lavarropas")
-// break;
+case "lavarropas": console.log ("Ingreso de lavarropas")
+break;
 
-// case "horno": console.log("ingreso Horno")
-// break;
+case "horno": console.log("ingreso Horno")
+break;
 
-// case "heladera": console.log("ingreso heladera")
-// break;
+case "heladera": console.log("ingreso heladera")
+break;
 
-// case "total": console.log (entradaDeMaterial)
+case "total": console.log (entradaDeMaterial)
 
-// default: console.log ("error de material")
-// }
-// MATERIAL = prompt ("ingresar material")
-// }
+default: console.log ("error de material")
+}
+MATERIAL = prompt ("ingresar material")
+}
 
-// alert ("Saliendo del sisema...")
+alert ("Saliendo del sisema...")
 
 // Material Valorizado
 
