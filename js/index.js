@@ -106,29 +106,45 @@
 
 // SEGUNDA PRE ENTREGA
 
-// const objHeladera = {
-//     marca: "Electrolux",
-//     precioMaterial: 6900,
-//     codigoParte: 100200,
-//     stock: 38,
-// }
+// Objetos del inventario, con Arrays
 
-// const objLavarropas = {
-//     marca: "Drean",
-//     precioMaterial: 8900,
-//     codigoParte: 100500,
-//     stock: 120,
-// }
-// const objHorno= {
-//     marca: "Next",
-//     precioMaterial: 7900,
-//     codigoParte: 100800,
-//     stock: 265,
-// }
+const cantidadDeProductos = [
+    {
+    tipo: "heladera",
+    marca: "Electrolux",
+    precioMaterial: 6900,
+    codigoParte: 100200,
+    stock: 38,
+    },
 
-// console.log(objHeladera.marca)
+    {
+    tipo: "lavarropas",
+    marca: "Drean",
+    precioMaterial: 8900,
+    codigoParte: 100500,
+    stock: 120,
+    },
+    {
+    tipo: "horno",
+    marca: "Next",
+    precioMaterial: 7900,
+    codigoParte: 100800,
+    stock: 265,
+    },
+]
 
-// /// Sumando stock en inventario
+const cantidades = cantidadDeProductos.length;
+console.log("el inventario de productos contiene:" + cantidades) // Busco el totalizado de los productos en inventario
+
+console.log(cantidadDeProductos[2]) // Selecciono objeto en el array
+
+// Agregando elementos
+
+cantidadDeProductos.push("calefon")
+console.log(cantidadDeProductos)
+
+
+/// Sumando stock en inventario
 // objHeladera["stock"] = prompt("ingrese nuevo stock de Heladeras:")
 // console.log(objHeladera)
 
@@ -164,15 +180,7 @@ const nuevoMaterial3 = new datosMaterialesConClase ("Drean", 9850, 300500, 90)
 console.log (nuevoMaterial3)
 
 
-// Arrays
 
-const cantidadProductos = ["lavarropas", "horno", "heladera"]
-const cantidades = cantidadProductos.length;
-console.log("el inventario de productos contiene:" + cantidades)
-
-stockElectros = ["lavarropas", "horno", "heladera"]
-stockElectros.push ('extender garantia 12 meses')
-console.log(stockElectros)
 
 
 
