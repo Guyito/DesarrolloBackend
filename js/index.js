@@ -158,7 +158,8 @@ console.log (cantidadDeProductos.stock in cantidadDeProductos) // Chequeo de sto
 const reponerStock = cantidadDeProductos.filter((sinStock) => sinStock.stock = 0)
 console.log (reponerStock)
 
-const aumentoPrecio = cantidadDeProductos.map((aument) => {
+
+const aumentoPrecio = cantidadDeProductos.map((aument) => { // Aumento de precio sobre valor
     return {
         precioMaterial: aument.precioMaterial *1.20
     }
@@ -170,11 +171,6 @@ console.log (aumentoPrecio)
 
 cantidadDeProductos.push("calefon")
 console.log(cantidadDeProductos)
-
-
-/// Sumando stock en inventario
-// objHeladera["stock"] = prompt("ingrese nuevo stock de Heladeras:")
-// console.log(objHeladera)
 
 /// Crando nuevo material en inventario
 
@@ -207,11 +203,8 @@ class datosMaterialesConClase {
 const nuevoMaterial3 = new datosMaterialesConClase ("Drean", 9850, 300500, 90)
 console.log (nuevoMaterial3)
 
+console.log (new Date())
 
-
-
-
-
-
-
+const precioMaximoMaterial = cantidadDeProductos.filter(idprod => idprod.precioMaterial >=8900)
+console.log(precioMaximoMaterial)
 
