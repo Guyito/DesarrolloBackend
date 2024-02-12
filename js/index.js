@@ -103,10 +103,11 @@
 // let nuevoValor = valorMaterial (3500, false)
 // console.log("el nuevo valor es" + nuevoValor)
 
+//------------------------------------------------------------------------------------------
 
 // SEGUNDA PRE ENTREGA
 
-// Objetos del inventario, con Arrays
+    // Objetos del inventario, con Arrays
 
 const cantidadDeProductos = [
     {
@@ -131,12 +132,39 @@ const cantidadDeProductos = [
     codigoParte: 100800,
     stock: 265,
     },
+    // AGREGADO DE OBJETO PARA COMPROBACION
+    // {
+    // tipo: "tostadora",
+    // marca: "pepe",
+    // precioMaterial: 900,
+    // codigoParte: 10001,
+    // stock: 500,
+    // },
+    {
+    tipo: "waflera",
+    marca: "Yelmo",
+    precioMaterial: 750,
+    codigoParte: 10005,
+    stock: 0,
+    }
 ]
 
 const cantidades = cantidadDeProductos.length;
 console.log("el inventario de productos contiene:" + cantidades) // Busco el totalizado de los productos en inventario
 
 console.log(cantidadDeProductos[2]) // Selecciono objeto en el array
+console.log (cantidadDeProductos.stock in cantidadDeProductos) // Chequeo de stock en inventario
+
+const reponerStock = cantidadDeProductos.filter((sinStock) => sinStock.stock = 0)
+console.log (reponerStock)
+
+const aumentoPrecio = cantidadDeProductos.map((aument) => {
+    return {
+        precioMaterial: aument.precioMaterial *1.20
+    }
+})
+console.log (aumentoPrecio)
+
 
 // Agregando elementos
 
@@ -178,6 +206,8 @@ class datosMaterialesConClase {
 }
 const nuevoMaterial3 = new datosMaterialesConClase ("Drean", 9850, 300500, 90)
 console.log (nuevoMaterial3)
+
+
 
 
 
