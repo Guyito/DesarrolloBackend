@@ -1,5 +1,9 @@
 
-// // Proyecto de App para Stock e inventario
+// Proyecto de App para Stock e inventario
+
+function newDoc() {
+    window.location.assign("../index.html")
+}
 
 // alert ("Bienvenido! Por favor seleccione la opcion de logueo:")
 
@@ -207,4 +211,41 @@ console.log (new Date())
 
 const precioMaximoMaterial = cantidadDeProductos.filter(idprod => idprod.precioMaterial >=8900)
 console.log(precioMaximoMaterial)
+
+const btn = document.getElementById("btn");
+
+
+// addEventListener (evento, funcion) {el más utilizado}
+
+// btn.addEventListener('click', function(){
+//     alert('se esta ejecutando el evento')
+// });
+
+// const cambiarColor = document.addEventListener ('click', function(){
+//     document.body.style.backgroundColor='blue';
+// });
+
+/// mouse over, determina cuando se mueve el puntero
+
+// const caja = document.getElementById ("caja")
+// caja.mouseover = () =>{
+//     console.log ("ingreso el mouse")
+
+
+// }
+
+// caja.addEventListener('mouse')
+
+// mousemove = movimiento del mouse sobre elemento
+
+// evento de teclado
+
+// let campoTexto = document.getElementById ("campoTexto")
+
+// campoTexto.onkeydown = ()=>{
+//     console.log ("presionaste una tecla")
+// }
+// campoTexto.onkeyup = ()=>{
+//     console.log ("soltaste una tecla")
+// }
 
