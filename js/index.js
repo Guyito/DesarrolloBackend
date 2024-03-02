@@ -249,3 +249,7 @@ const btn = document.getElementById("btn");
 //     console.log ("soltaste una tecla")
 // }
 
+const DateTime = luxon.DateTime;
+const navidad = DateTime(2014,12,24,12,12);
+console.log(navidad)
+

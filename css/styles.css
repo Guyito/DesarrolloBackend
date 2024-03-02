@@ -1,12 +1,57 @@
 
+* {
+    margin: 0;
+    padding: 0;
+}
 
 h1 {
-    background-color: blueviolet;
     color: white;
-    font-size: large;
     text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+h2 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h3 {
+    text-align: left;
+    font-size: smaller;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 a {
     background-color: greenyellow;
+}
+
+body {
+    background-color: #1C418C;
+    margin: 0 auto;
+
+}
+
+header {
+    height: 50px;
+    align-items: center;
+    background-color: #03A696
+}
+
+
+.contenedorForm {
+    padding: auto;
+    background-color: #03A696;
+    height: 350px;
+    width: 350px;
+    box-shadow: 10px 5px 5px black;
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
 }
