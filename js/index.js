@@ -3,7 +3,51 @@
 
 function newDoc() {
     window.location.assign("../index.html")
-}
+} // link entre paginas
+
+
+// Input de usuario
+
+// document.getElementById("inputUsuario").value = "";
+// document.getElementById("inputPassword").value ="";
+
+
+// DOM - Texto de Usuario luego de logueo
+let usuarioQueIngresa = document.getElementById ("usuarioEntrante")
+console.log(usuarioQueIngresa.innerText)
+
+usuarioQueIngresa.innerText = "Bienvenido Usuario"
+console.log (usuarioQueIngresa.innerText)
+
+
+let textoHome = document.createElement ("parrafoHome")
+textoHome.innerHTML ="lorem";
+
+document.body.append(textoHome)
+
+
+const contenedorHome = document.createElement('div')
+contenedorHome.classList = 'containerStock'
+
+const textoContenedorHome = document.createElement('h2')
+textoContenedorHome.classList = 'textoConJavaS'
+textoContenedorHome.textContent = 'Seleccione los materiales de ingreso o salida'
+
+const parrafoContenedorHome = document.createElement('p')
+parrafoContenedorHome.classList = 'parrafConJavaS'
+parrafoContenedorHome.textContent = 'Lorem ipsum dolor sit amet.'
+
+// Anido los elementos del div
+contenedorHome.appendChild(textoContenedorHome)
+contenedorHome.appendChild(parrafoContenedorHome)
+console.log(contenedorHome)
+
+// Pasado a Doc.
+
+const insertarEnDoc = document.querySelector('.containerStock')
+console.log(insertarEnDoc.children)
+
+
 
 // alert ("Bienvenido! Por favor seleccione la opcion de logueo:")
 
@@ -249,7 +293,7 @@ const btn = document.getElementById("btn");
 //     console.log ("soltaste una tecla")
 // }
 
-const DateTime = luxon.DateTime;
-const navidad = DateTime(2014,12,24,12,12);
-console.log(navidad)
+// const DateTime = luxon.DateTime;
+// const navidad = DateTime(2014,12,24,12,12);
+// console.log(navidad)
 
