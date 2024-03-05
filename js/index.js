@@ -71,88 +71,88 @@ console.log(insertarEnDoc.children)
 
 // Buscar Material
 
-let nombreMaterial = prompt ("cual material busca?");
-const PARTCODE = "1234"
+// let nombreMaterial = prompt ("cual material busca?");
+// const PARTCODE = "1234"
 
-if ((nombreMaterial == "refrigerador") || (nombreMaterial == "heladera"))
-    console.log (nombreMaterial + "el codigo de parte buscado es" + "" + PARTCODE);
-    else {
-console.log ("no existe el material")
-    }
+// if ((nombreMaterial == "refrigerador") || (nombreMaterial == "heladera"))
+//     console.log (nombreMaterial + "el codigo de parte buscado es" + "" + PARTCODE);
+//     else {
+// console.log ("no existe el material")
+//     }
 
 
-// Materiales con precio:
+// // Materiales con precio:
 
-let materialLavarropas = 0;
+// let materialLavarropas = 0;
 
-for (let i = 1; i == 10; i++){
+// for (let i = 1; i == 10; i++){
 
-    if (materialLavarropas == 5){
-        console.log ("Se uso el 50% del stock, pedir Compra")
-    }
-}
-
-// Nuevo Usuario
-
-// let continuarOno = "si"
-
-// if (continuarOno != true){ 
-
-// let nombre = prompt ("Nombre de Usuario:")
-// let apellido = prompt ("Apellido de Usuario:")
-// const legajo = prompt ("Ingrese su legajo:")
-
-// console.log (nombre + " " + apellido + " " + legajo)
-// } else {
-//     alert ("salir del sistema")
+//     if (materialLavarropas == 5){
+//         console.log ("Se uso el 50% del stock, pedir Compra")
+//     }
 // }
 
-// Ingreso de entrada de materiales
+// // Nuevo Usuario
 
-// let materialLavarropas =0 (YA DECLARADO)
-let materialHeladera=0
-let materialHorno=0
+// // let continuarOno = "si"
 
-let MATERIAL = prompt ("ingresar material")
+// // if (continuarOno != true){ 
 
-while (MATERIAL != "ESC"){
+// // let nombre = prompt ("Nombre de Usuario:")
+// // let apellido = prompt ("Apellido de Usuario:")
+// // const legajo = prompt ("Ingrese su legajo:")
 
-switch (MATERIAL){
+// // console.log (nombre + " " + apellido + " " + legajo)
+// // } else {
+// //     alert ("salir del sistema")
+// // }
 
-case "lavarropas": console.log ("Ingreso de lavarropas")
-break;
+// // Ingreso de entrada de materiales
 
-case "horno": console.log("ingreso Horno")
-break;
+// // let materialLavarropas =0 (YA DECLARADO)
+// let materialHeladera=0
+// let materialHorno=0
 
-case "heladera": console.log("ingreso heladera")
-break;
+// let MATERIAL = prompt ("ingresar material")
 
-default: console.log ("error de material")
-}
-MATERIAL = prompt ("ingresar material")
-}
+// while (MATERIAL != "ESC"){
 
-alert ("Saliendo del sisema...")
+// switch (MATERIAL){
 
-// Material Valorizado
+// case "lavarropas": console.log ("Ingreso de lavarropas")
+// break;
 
-function valorMaterial (precioMaterial, enviosNacionales){
+// case "horno": console.log("ingreso Horno")
+// break;
+
+// case "heladera": console.log("ingreso heladera")
+// break;
+
+// default: console.log ("error de material")
+// }
+// MATERIAL = prompt ("ingresar material")
+// }
+
+// alert ("Saliendo del sisema...")
+
+// // Material Valorizado
+
+// function valorMaterial (precioMaterial, enviosNacionales){
 
 
-    let ivaDeMaterial = 1.21;
+//     let ivaDeMaterial = 1.21;
 
-    if (enviosNacionales === true){
-        enviosNacionales = 3000
-    }else enviosNacionales =0
+//     if (enviosNacionales === true){
+//         enviosNacionales = 3000
+//     }else enviosNacionales =0
 
-    let resultadoPrecio = (precioMaterial * ivaDeMaterial) + enviosNacionales
+//     let resultadoPrecio = (precioMaterial * ivaDeMaterial) + enviosNacionales
 
-    return resultadoPrecio
-}
+//     return resultadoPrecio
+// }
 
-let nuevoValor = valorMaterial (3500, false)
-console.log("el nuevo valor es" + nuevoValor)
+// let nuevoValor = valorMaterial (3500, false)
+// console.log("el nuevo valor es" + nuevoValor)
 
 //------------------------------------------------------------------------------------------
 

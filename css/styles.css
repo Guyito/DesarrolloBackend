@@ -56,3 +56,46 @@ header {
     align-items: center;
     border-radius: 20px;
 }
+
+.materialIngreso {
+    display: grid;
+    grid-template-columns: auto;
+
+    font-size: 30px;
+    text-align: center;
+    width: auto;
+    padding: 20px;
+    margin: 50px;
+    height: 300px;
+    border-radius: 2px;
+    background-color: #03A696;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.textoConJavaS {
+    color: black;
+}
+
+.materialEgreso {
+    display: grid;
+    grid-template-columns: auto;
+
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+
+    width: auto;
+    margin: 50px;
+    height: 300px;
+    border-radius: 2px;
+    background-color: #03A696;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    
+}
+
+.botonExit {
+    align-items: center;
+    border-bottom: #03A696;
+}
