@@ -1,30 +1,34 @@
 
 // Proyecto de App para Stock e inventario
 
+// Logueo y Salida
+
 function newDoc() {
-    window.location.assign("../index.html")
-} // link entre paginas
+    var usuario, pass;
+    user=document.getElementById("inputUsuario").value
+    pass=document.getElementById("inputPassword").value
 
+    if (user == "L5555" && pass =="1234"){
+        window.location.assign("http://127.0.0.1:5500/pages/home.html")
+    }else{
+        alert("error")
+    }
+}
 
-// Input de usuario
-
-// document.getElementById("inputUsuario").value = "";
-// document.getElementById("inputPassword").value ="";
-
+function salidaSys(){
+    window.location.assign("http://127.0.0.1:5500/index.html?")
+}
 
 // DOM - Texto de Usuario luego de logueo
+
 let usuarioQueIngresa = document.getElementById ("usuarioEntrante")
-console.log(usuarioQueIngresa.innerText)
+// console.log(usuarioQueIngresa.innerText)
 
 usuarioQueIngresa.innerText = "Bienvenido Usuario"
-console.log (usuarioQueIngresa.innerText)
+// console.log (usuarioQueIngresa.innerText)
 
 
-let textoHome = document.createElement ("parrafoHome")
-textoHome.innerHTML ="lorem";
-
-document.body.append(textoHome)
-
+// DOM contra Home
 
 const contenedorHome = document.createElement('div')
 contenedorHome.classList = 'containerStock'
@@ -48,7 +52,6 @@ const insertarEnDoc = document.querySelector('.containerStock')
 console.log(insertarEnDoc.children)
 
 
-
 // alert ("Bienvenido! Por favor seleccione la opcion de logueo:")
 
 
@@ -66,30 +69,30 @@ console.log(insertarEnDoc.children)
 // }
 
 
-// // Buscar Material
+// Buscar Material
 
-// let nombreMaterial = prompt ("cual material busca?");
-// const PARTCODE = "1234"
+let nombreMaterial = prompt ("cual material busca?");
+const PARTCODE = "1234"
 
-// if ((nombreMaterial == "refrigerador") || (nombreMaterial == "heladera"))
-//     console.log (nombreMaterial + "el codigo de parte buscado es" + "" + PARTCODE);
-//     else {
-// console.log ("no existe el material")
-//     }
+if ((nombreMaterial == "refrigerador") || (nombreMaterial == "heladera"))
+    console.log (nombreMaterial + "el codigo de parte buscado es" + "" + PARTCODE);
+    else {
+console.log ("no existe el material")
+    }
 
 
-// // Materiales con precio:
+// Materiales con precio:
 
-// let materialLavarropas = 0;
+let materialLavarropas = 0;
 
-// for (let i = 1; i == 10; i++){
+for (let i = 1; i == 10; i++){
 
-//     if (materialLavarropas == 5){
-//         console.log ("Se uso el 50% del stock, pedir Compra")
-//     }
-// }
+    if (materialLavarropas == 5){
+        console.log ("Se uso el 50% del stock, pedir Compra")
+    }
+}
 
-// // Nuevo Usuario
+// Nuevo Usuario
 
 // let continuarOno = "si"
 
@@ -104,58 +107,58 @@ console.log(insertarEnDoc.children)
 //     alert ("salir del sistema")
 // }
 
-// // Ingreso de entrada de materiales
+// Ingreso de entrada de materiales
 
-// // let materialLavarropas =0 (YA DECLARADO)
-// let materialHeladera=0
-// let materialHorno=0
+// let materialLavarropas =0 (YA DECLARADO)
+let materialHeladera=0
+let materialHorno=0
 
-// let MATERIAL = prompt ("ingresar material")
+let MATERIAL = prompt ("ingresar material")
 
-// while (MATERIAL != "ESC"){
+while (MATERIAL != "ESC"){
 
-// switch (MATERIAL){
+switch (MATERIAL){
 
-// case "lavarropas": console.log ("Ingreso de lavarropas")
-// break;
+case "lavarropas": console.log ("Ingreso de lavarropas")
+break;
 
-// case "horno": console.log("ingreso Horno")
-// break;
+case "horno": console.log("ingreso Horno")
+break;
 
-// case "heladera": console.log("ingreso heladera")
-// break;
+case "heladera": console.log("ingreso heladera")
+break;
 
-// default: console.log ("error de material")
-// }
-// MATERIAL = prompt ("ingresar material")
-// }
+default: console.log ("error de material")
+}
+MATERIAL = prompt ("ingresar material")
+}
 
-// alert ("Saliendo del sisema...")
+alert ("Saliendo del sisema...")
 
-// // Material Valorizado
+// Material Valorizado
 
-// function valorMaterial (precioMaterial, enviosNacionales){
+function valorMaterial (precioMaterial, enviosNacionales){
 
 
-//     let ivaDeMaterial = 1.21;
+    let ivaDeMaterial = 1.21;
 
-//     if (enviosNacionales === true){
-//         enviosNacionales = 3000
-//     }else enviosNacionales =0
+    if (enviosNacionales === true){
+        enviosNacionales = 3000
+    }else enviosNacionales =0
 
-//     let resultadoPrecio = (precioMaterial * ivaDeMaterial) + enviosNacionales
+    let resultadoPrecio = (precioMaterial * ivaDeMaterial) + enviosNacionales
 
-//     return resultadoPrecio
-// }
+    return resultadoPrecio
+}
 
-// let nuevoValor = valorMaterial (3500, false)
-// console.log("el nuevo valor es" + nuevoValor)
+let nuevoValor = valorMaterial (3500, false)
+console.log("el nuevo valor es" + nuevoValor)
 
 //------------------------------------------------------------------------------------------
 
 // SEGUNDA PRE ENTREGA
 
-    // Objetos del inventario, con Arrays
+// Objetos del inventario, con Arrays
 
 const cantidadDeProductos = [
     {

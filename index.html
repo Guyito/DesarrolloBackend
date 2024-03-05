@@ -20,26 +20,23 @@
     <div class="contenedorForm">
         <h2>Bienvenido a CoderStock</h2>
         <h3>Ingrese sus credenciales</h3>
-        <form action="./pages/home.html">
+
+        <form id ="loginSys">
             
             <div class="form-floating mb-3">
                 <input text="Legajo" class="form-control" id="inputUsuario" placeholder="">
                 <label for="floatingInput">Legajo</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                <input type="password" class="form-control" id="inputPassword" placeholder="">
                 <label for="floatingPassword">Password</label>
             </div>
             <br>
-            <input type="submit" value="Submit" class="form-control" style="font-weight: 650;">
+            <input type="button" value="Entrar" class="form-control" style="font-weight: 650;" onclick="newDoc()">
         </form>
     </div>
 
-    <!-- <button id="btn">hacer click</button>
-    <button id ="cambiarColor">cambiar color</button> -->
-
-    <!-- <input type="text" id="campoTexto"> -->
-
+    
 
 <!-- SCRIPTS-->
 <script src="./js/index.js"></script><!-- LINK AL JS-->
