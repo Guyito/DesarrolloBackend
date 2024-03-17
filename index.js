@@ -16,7 +16,7 @@ function newDoc() {
 }
 
 function salidaSys(){
-    window.location.assign("http://127.0.0.1:5500/index.html?")
+    window.location.assign("http://127.0.0.1:5500/index.html")
 }
 
 // DOM - Texto de Usuario luego de logueo
@@ -48,8 +48,8 @@ console.log(contenedorHome)
 
 // Pasado a Doc.
 
-const insertarEnDoc = document.querySelector('.containerStock')
-console.log(insertarEnDoc.children)
+// const insertarEnDoc = document.querySelector('.containerStock')
+// console.log(insertarEnDoc.children)
 
 
 // alert ("Bienvenido! Por favor seleccione la opcion de logueo:")
@@ -262,41 +262,73 @@ console.log(precioMaximoMaterial)
 const btn = document.getElementById("btn");
 
 
-// addEventListener (evento, funcion) {el más utilizado}
+// Renderizando codigo de entrada-salida de materiales
 
-// btn.addEventListener('click', function(){
-//     alert('se esta ejecutando el evento')
-// });
+let carrito = []
 
-// const cambiarColor = document.addEventListener ('click', function(){
-//     document.body.style.backgroundColor='blue';
-// });
+const electrodomesticos = [
+    { id: 1, nombre: 'Lavadora', precio: 500 },
+    { id: 2, nombre: 'Refrigerador', precio: 700 },
+    { id: 3, nombre: 'Microondas', precio: 300 },
+    { id: 4, nombre: 'Licuadora', precio: 100 },
+    { id: 5, nombre: 'Horno', precio: 450 }
+]
 
-/// mouse over, determina cuando se mueve el puntero
+function agregarAlCarrito() {
+    const select = document.getElementById('electrodomesticos')
+    const id = parseInt(select.value)
+    const selecccionElectrodomestico = electrodomesticos.find(item => item.id === id)
 
-// const caja = document.getElementById ("caja")
-// caja.mouseover = () =>{
-//     console.log ("ingreso el mouse")
+    carrito.push(selecccionElectrodomestico);
+    actualizarCarrito();
+}
+
+function actualizarCarrito() {
+    const carritoDiv = document.getElementById('carrito');
+    carritoDiv.innerHTML = ''
+    
+    carrito.forEach(item => {
+        const itemDiv = document.createElement('div')
+        itemDiv.textContent = item.nombre
+        carritoDiv.appendChild(itemDiv)
+    })
+}
+
+function calcularTotal() {
+    const total = carrito.reduce((acc, item) => acc + item.precio, 0);
+    alert(`Movimiento de Stock Valorizado: $${total}`);
+}
+
+// Asignar eventos a los botones
+document.getElementById('finalizarBtn').addEventListener('click', calcularTotal);
 
 
-// }
+function borrarDelCarrito(index) {
+    carrito.splice(index, 1);
+    actualizarCarrito();
+}
 
-// caja.addEventListener('mouse')
+function actualizarCarrito() {
+    const carritoDiv = document.getElementById('carrito');
+    carritoDiv.innerHTML = '';
+    
+    carrito.forEach((item, index) => {
+        const itemDiv = document.createElement('div');
+        const texto = `${item.nombre} - $${item.precio}`;
+        itemDiv.textContent = texto;
 
-// mousemove = movimiento del mouse sobre elemento
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Eliminar';
+        deleteBtn.addEventListener('click', () => borrarDelCarrito(index));
 
-// evento de teclado
+        itemDiv.appendChild(deleteBtn);
+        carritoDiv.appendChild(itemDiv);
+    });
+}
 
-// let campoTexto = document.getElementById ("campoTexto")
+// Local Storage de usuarios
 
-// campoTexto.onkeydown = ()=>{
-//     console.log ("presionaste una tecla")
-// }
-// campoTexto.onkeyup = ()=>{
-//     console.log ("soltaste una tecla")
-// }
+    const electroJSON = JSON.stringify(electrodomesticos)
+    localStorage.setItem("electros", electroJSON)
 
-// const DateTime = luxon.DateTime;
-// const navidad = DateTime(2014,12,24,12,12);
-// console.log(navidad)
 

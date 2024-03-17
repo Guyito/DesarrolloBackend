@@ -16,29 +16,30 @@
     </header>
     <br>
 
-    <section class="materialIngreso">
 
-    <div class="containerStock">
-        <h2 class="textoConJavaS">Ingreso de Productos</h2>
-        <p class="parrafConJavaS"></p>
-    </div>
+    <!-- <div class="materialInOut"> -->
+        
+        <h1>Seleccionar electrodomésticos:</h1>
+        <select id="electrodomesticos">
+            <option value="1">Lavadora</option>
+            <option value="2">Refrigerador</option>
+            <option value="3">Microondas</option>
+            <option value="4">Licuadora</option>
 
-    </section>
+        </select>
+    
+        <button onclick="agregarAlCarrito()">Agregar al carrito</button>
+        <button id="finalizarBtn">Finalizar Operación</button>
+    
+        <div id="carrito"></div>
 
-    <section class="materialEgreso">
 
-    <div class="containerStock">
-        <h2 class="textoConJavaS">Egreso de Productos</h2>
-        <p class="parrafConJavaS"></p>
-    </div>
+    <!-- </div> -->
 
-    </section>
-
-        <input type="button" value="Exit" onclick="salidaSys()">
-
-    <br>
+        <input type="button" class="botonExit" value="Exit" onclick="salidaSys()">
+    
 </body>
 
 
-<script src="../js/index.js"></script> <!-- LINK AL JS-->
+<script src="../index.js"></script> <!-- LINK AL JS-->
 </html>
