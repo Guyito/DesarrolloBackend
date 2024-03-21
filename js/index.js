@@ -4,7 +4,6 @@
 // Logueo y Salida
 
 function newDoc() {
-    var usuario, pass;
     user=document.getElementById("inputUsuario").value
     pass=document.getElementById("inputPassword").value
 
@@ -135,24 +134,24 @@ console.log(contenedorHome)
 
 // alert ("Saliendo del sisema...")
 
-// // Material Valorizado
+// Material Valorizado
 
-// function valorMaterial (precioMaterial, enviosNacionales){
+function valorMaterial (precioMaterial, enviosNacionales){
 
 
-//     let ivaDeMaterial = 1.21;
+    let ivaDeMaterial = 1.21;
 
-//     if (enviosNacionales === true){
-//         enviosNacionales = 3000
-//     }else enviosNacionales =0
+    if (enviosNacionales === true){
+        enviosNacionales = 3000
+    }else enviosNacionales =0
 
-//     let resultadoPrecio = (precioMaterial * ivaDeMaterial) + enviosNacionales
+    let resultadoPrecio = (precioMaterial * ivaDeMaterial) + enviosNacionales
 
-//     return resultadoPrecio
-// }
+    return resultadoPrecio
+}
 
-// let nuevoValor = valorMaterial (3500, false)
-// console.log("el nuevo valor es" + nuevoValor)
+let nuevoValor = valorMaterial (3500, false)
+console.log("el nuevo valor es" + nuevoValor)
 
 //------------------------------------------------------------------------------------------
 
@@ -230,7 +229,6 @@ function datosMateriales (marca, precioMaterial, codigoParte, stock){
     this.precioMaterial = precioMaterial;
     this.codigoParte = codigoParte;
     this.stock = stock;
-    this.valorTotalizado = function (precioMaterial, stock) {precioMaterial*stock}
 }
 
 const nuevoMaterial = new datosMateriales("whirpool", 35500, 100900, 5)
@@ -245,7 +243,6 @@ class datosMaterialesConClase {
         this.precio = precio;
         this.codigoParte = codigoParte;
         this.stock = stock;
-        this.valorTotalizado = function (precioMaterial, stock) {precio*stock}
     }
     calculoTot (){
         this.precio = this.precio * this.stock
