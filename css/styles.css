@@ -27,15 +27,18 @@ a {
 
 body {
     background-color: #1C418C;
-    margin: 0 auto;
-    height: auto;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
+
 
 header {
     height: 50px;
-    align-items: center;
-    background-color: #03A696
+    background-color: #03A696;
 }
 
 
@@ -57,7 +60,7 @@ header {
 }
 
 
-.materialInOut {
+/* .materialInOut {
     background: lightgray;
     min-height: 300px;
     display: grid;
@@ -70,7 +73,7 @@ header {
     grid-template-columns: repeat(2, 100fr);
     grid-template-rows: 75px 125px ;
     gap: 20px;
-}
+}  */
 
 
 .textoConJavaS {
@@ -82,4 +85,25 @@ header {
     margin: 5px 50%;
     border-radius: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container-sys{
+
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+    align-items: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.bodyHome{
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }

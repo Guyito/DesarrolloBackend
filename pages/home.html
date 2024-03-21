@@ -15,26 +15,32 @@
     <header>
         <h1 id="usuarioEntrante">Sistema de Stock</h1>
     </header>
-    <br>
-
         
         <h1>Seleccionar electrodomésticos:</h1>
-        <select id="electrodomesticos">
-            <option value="1">Lavadora</option>
-            <option value="2">Refrigerador</option>
-            <option value="3">Microondas</option>
-            <option value="4">Licuadora</option>
+        <div class="container-sys">
+            <div class="desplegable">
+                <select id="electrodomesticos">
+                    <option value="1">Lavadora</option>
+                    <option value="2">Refrigerador</option>
+                    <option value="3">Microondas</option>
+                    <option value="4">Licuadora</option>
+                </select>
+            </div>
 
-        </select>
-    
-        <button class="btn btn-primary btn-lg" id="tosti" onclick="agregarAlCarrito()">Agregar al carrito</button>
-        <button class="btn btn-secondary btn-lg" id="finalizarBtn">Finalizar Operación</button>
-    
-        <div id="carrito"></div>
+            <div class="btn-agregar">
+                <button class="btn btn-primary btn-lg" id="tosti" onclick="agregarAlCarrito()">Agregar al carrito</button>
+            </div>
 
+            <div class="btn-finalizar">
+                <button class="btn btn-secondary btn-lg" id="finalizarBtn">Finalizar Operación</button>
+            </div>
 
-        <input type="button" class="botonExit" value="Exit" onclick="salidaSys()">
-    
+            <div id="carrito"></div>
+
+            <div class="btn-salir">
+                <input type="button" class="botonExit" value="Exit" onclick="salidaSys()">
+            </div>
+        </div>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
