@@ -1,4 +1,4 @@
-// Logueo y Salida
+// Logueo
 
 function newDoc() {
     user=document.getElementById("inputUsuario").value
@@ -7,7 +7,11 @@ function newDoc() {
     if (user == "L5555" && pass =="1234"){
         window.location.assign("http://127.0.0.1:5500/pages/home.html")
     }else{
-        alert("error")
+        Swal.fire({
+            icon: "error",
+            title: "Error..",
+            text: "Verifique Legajo y Password!",
+        });
     }
 }
 

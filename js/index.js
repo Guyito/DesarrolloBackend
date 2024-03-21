@@ -1,22 +1,21 @@
 
 // Proyecto de App para Stock e inventario
 
-// Logueo y Salida
-
-function newDoc() {
-    user=document.getElementById("inputUsuario").value
-    pass=document.getElementById("inputPassword").value
-
-    if (user == "L5555" && pass =="1234"){
-        window.location.assign("http://127.0.0.1:5500/pages/home.html")
-    }else{
-        alert("error")
-    }
-}
+// Salida
 
 function salidaSys(){
-    window.location.assign("http://127.0.0.1:5500/index.html")
-}
+    Swal.fire({
+        title: "Saliendo del sistema",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si, Salir!"
+        }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.assign("http://127.0.0.1:5500/index.html");
+        }});
+        }
 
 // DOM - Texto de Usuario luego de logueo
 
@@ -80,8 +79,6 @@ console.log(contenedorHome)
 //     }
 
 
-// // Materiales con precio:
-
 // let materialLavarropas = 0;
 
 // for (let i = 1; i == 10; i++){
@@ -91,24 +88,9 @@ console.log(contenedorHome)
 //     }
 // }
 
-// // Nuevo Usuario
+// Ingreso de entrada de materiales
 
-// // let continuarOno = "si"
-
-// // if (continuarOno != true){ 
-
-// // let nombre = prompt ("Nombre de Usuario:")
-// // let apellido = prompt ("Apellido de Usuario:")
-// // const legajo = prompt ("Ingrese su legajo:")
-
-// // console.log (nombre + " " + apellido + " " + legajo)
-// // } else {
-// //     alert ("salir del sistema")
-// // }
-
-// // Ingreso de entrada de materiales
-
-// // let materialLavarropas =0 (YA DECLARADO)
+// let materialLavarropas =0 (YA DECLARADO)
 // let materialHeladera=0
 // let materialHorno=0
 
@@ -271,10 +253,11 @@ const electrodomesticos = [
     { id: 5, nombre: 'Horno', precio: 450 }
 ]
 
+
 function agregarAlCarrito() {
     const select = document.getElementById('electrodomesticos')
     const id = parseInt(select.value)
-    const selecccionElectrodomestico = electrodomesticos.find(item => item.id === id)
+    const selecccionElectrodomestico = electrodomesticos.find(item => item.id === id)   
 
     carrito.push(selecccionElectrodomestico);
     actualizarCarrito();
@@ -293,7 +276,7 @@ function actualizarCarrito() {
 
 function calcularTotal() {
     const total = carrito.reduce((acc, item) => acc + item.precio, 0);
-    alert(`Movimiento de Stock Valorizado: $${total}`);
+    Swal.fire(`Movimiento de Stock Valorizado: $${total}`);
 }
 
 // Asignar eventos a los botones
@@ -316,6 +299,7 @@ function actualizarCarrito() {
 
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Eliminar';
+        deleteBtn.classList = 'botonPrueba';
         deleteBtn.addEventListener('click', () => borrarDelCarrito(index));
 
         itemDiv.appendChild(deleteBtn);
