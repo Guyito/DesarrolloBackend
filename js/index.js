@@ -254,6 +254,15 @@ const electrodomesticos = [
 ]
 
 
+const tosti = document.getElementById('tosti')
+tosti.addEventListener('click', () => {
+    Toastify({
+        text: "Procesado!",
+        duration: 3000,
+        position: "right",
+
+    }).showToast();
+})
 function agregarAlCarrito() {
     const select = document.getElementById('electrodomesticos')
     const id = parseInt(select.value)
